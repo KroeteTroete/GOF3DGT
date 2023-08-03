@@ -8,7 +8,7 @@ data = ld.extractLang("gb.lang")
 def translate():
     print(len(data))
 
-    for i in data[665:]:
+    for i in data:
         currentIndex = data.index(i)
         print(currentIndex)
         try:
