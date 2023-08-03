@@ -33,4 +33,6 @@ def translate():
             translate()
             
 
-ld.writeLang(data, "gb_modded.lang")
+    ld.writeLang(data, "gb_modded.lang")
+
+translate()
