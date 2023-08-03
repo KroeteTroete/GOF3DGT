@@ -5,10 +5,11 @@ import time
 
 data = ld.extractLang("gb.lang")
 
-def translate():
+def translate(lowerBoundary):
+
     print(len(data))
 
-    for i in data:
+    for i in data[lowerBoundary:]:
         currentIndex = data.index(i)
         print(currentIndex)
         try:
@@ -30,9 +31,9 @@ def translate():
                 sys.stdout.flush()
                 time.sleep(1)
 
-            translate()
+            translate(currentIndex)
             
 
     ld.writeLang(data, "gb_modded.lang")
 
-translate()
+translate(0)
